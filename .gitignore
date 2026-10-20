@@ -1,0 +1,9 @@
+node_modules/
+.next/
+output/
+.workflow-data/
+.vercel/
+.env*
+next-env.d.ts
+*.tsbuildinfo
+app/.well-known/

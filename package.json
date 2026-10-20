@@ -1,0 +1,32 @@
+{
+  "name": "nanocode-vercel-durable",
+  "private": true,
+  "description": "nanocode agents made durable on a Vercel Workflow World with durable-harness",
+  "license": "MIT OR Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check": "tsc --noEmit",
+    "cli": "node --disable-warning=ExperimentalWarning scripts/cli.ts",
+    "drill": "node --disable-warning=ExperimentalWarning scripts/drill.ts",
+    "vendor": "node scripts/vendor.mjs"
+  },
+  "dependencies": {
+    "@vercel/oidc": "3.2.0",
+    "durable-harness": "0.0.1-beta.6",
+    "just-bash": "3.6.0",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "typescript": "6.0.2"
+  }
+}
