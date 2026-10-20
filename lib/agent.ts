@@ -14,7 +14,9 @@ export const agent = durableAgent({
     provider: process.env.NANOCODE_PROVIDER === "codex" ? "codex" : "claude",
     model: process.env.NANOCODE_MODEL ?? (process.env.NANOCODE_PROVIDER === "codex" ? "gpt-6-luna" : "claude-sonnet-5-5"),
     instructions: INSTRUCTIONS,
+    durability: process.env.NANOCODE_DURABILITY === "strict" ? "strict" : "on",
     tools: appTools(charge => console.log(JSON.stringify({ charge }))),
+    report: drive => console.log(JSON.stringify({ drive })),
   }),
   durability: "strict",
 });
